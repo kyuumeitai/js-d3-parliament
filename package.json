@@ -1,26 +1,52 @@
 {
-  "name": "d3-parliament",
+  "name": "@bostonglobe/d3-parliament",
   "version": "1.0.1",
   "description": "A parliament chart based on d3",
-  "main": "d3-parliament.js",
-  "dependencies": {
-    "uglify-js": "^2.6.2"
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/runtime": "^7.11.2",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-url": "^5.0.1",
+    "d3": "^6.2.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "rollup": "^1.29.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^2.0.4"
   },
-  "devDependencies": {},
+  "peerDependencies": {
+    "d3": ">=6.2.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/geoffreybr/d3-parliament"
+    "url": "https://github.com/bostonglobe/js-d3-parliament"
   },
   "keywords": [
     "d3",
     "parliament"
   ],
-  "author": "Geoffrey Brossard <me@geoffreybrossard.fr>",
+  "contributors": [
+    "Todd Dukart <todd.dukart@globe.com>",
+    "Geoffrey Brossard <me@geoffreybrossard.fr>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/geoffreybr/d3-parliament/issues"
-  }
+    "url": "https://github.com/bostonglobe/js-d3-parliament/issues"
+  },
+  "files": [
+    "dist"
+  ]
 }
