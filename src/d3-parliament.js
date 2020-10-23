@@ -47,7 +47,7 @@ function parliament() {
 
       let nRows = 0;
       let maxSeatNumber = 0;
-      let b = 0.5;
+      let b = 1;
       ((() => {
         const a = innerRadiusCoef / (1 - innerRadiusCoef);
         while (maxSeatNumber < nSeats) {
