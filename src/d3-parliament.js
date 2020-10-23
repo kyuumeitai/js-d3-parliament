@@ -49,6 +49,7 @@ function parliament() {
       let maxSeatNumber = 0;
       let b = 1;
       ((() => {
+        let loopCounter = 0;
         const a = innerRadiusCoef / (1 - innerRadiusCoef);
         while (maxSeatNumber < nSeats) {
           nRows += 1;
@@ -58,6 +59,10 @@ function parliament() {
           it is not possible to increment the total number of seats adding a row. */
           // eslint-disable-next-line no-loop-func
           maxSeatNumber = series((i) => Math.floor(Math.PI * (b + i)), nRows - 1);
+          loopCounter += 1;
+          if (loopCounter > 1000) {
+            break;
+          }
         }
       })());
 
