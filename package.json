@@ -26,6 +26,7 @@
     "d3": ">=6.2.0"
   },
   "scripts": {
+    "lint": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "prepare": "npm run build"
