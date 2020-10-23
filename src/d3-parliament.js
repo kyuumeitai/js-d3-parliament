@@ -1,6 +1,16 @@
 /* eslint-disable no-param-reassign */
-import * as d3 from 'd3';
+import * as d3Dispatch from 'd3-dispatch';
+import * as d3Select from 'd3-selection';
+import * as d3Shape from 'd3-shape';
+import * as d3Transition from 'd3-transition';
 import series from './util/series';
+
+const d3 = {
+  ...d3Dispatch,
+  ...d3Select,
+  ...d3Shape,
+  ...d3Transition,
+};
 
 function parliament() {
   /* params */
@@ -27,7 +37,7 @@ function parliament() {
     'touchmove', 'touchstart');
 
   function innerParliament(data) {
-    data.each(function (d) {
+    data.each(function createViz(d) {
       // if user did not provide, fill the svg:
       width = width || this.getBoundingClientRect().width;
       height = width ? width / 2 : this.getBoundingClientRect().width / 2;
