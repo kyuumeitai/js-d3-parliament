@@ -13,7 +13,6 @@
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-url": "^5.0.1",
-    "d3": "^6.2.0",
     "eslint": "^7.11.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
@@ -21,9 +20,6 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^2.0.4"
-  },
-  "peerDependencies": {
-    "d3": ">=6.2.0"
   },
   "scripts": {
     "lint": "eslint src",
@@ -49,5 +45,11 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "d3-dispatch": "^2.0.0",
+    "d3-selection": "^2.0.0",
+    "d3-shape": "^2.0.0",
+    "d3-transition": "^2.0.0"
+  }
 }

@@ -43,7 +43,7 @@ function parliament() {
       height = width ? width / 2 : this.getBoundingClientRect().width / 2;
 
       const outerParliamentRadius = Math.min(width / 2, height);
-      const innerParliementRadius = outerParliamentRadius * innerRadiusCoef;
+      const innerParliamentRadius = outerParliamentRadius * innerRadiusCoef;
 
       /* init the svg */
       const svg = d3.select(this);
@@ -79,12 +79,12 @@ function parliament() {
       /** *
        * create the seats list */
       /* compute the cartesian and polar coordinates for each seat */
-      const rowWidth = (outerParliamentRadius - innerParliementRadius) / nRows;
+      const rowWidth = (outerParliamentRadius - innerParliamentRadius) / nRows;
       const seats = [];
       ((() => {
         const seatsToRemove = maxSeatNumber - nSeats;
         for (let i = 0; i < nRows; i += 1) {
-          const rowRadius = innerParliementRadius + rowWidth * (i + 0.5);
+          const rowRadius = innerParliamentRadius + rowWidth * (i + 0.5);
           const rowSeats = Math.floor(Math.PI * (b + i))
             - Math.floor(seatsToRemove / nRows) - (seatsToRemove % nRows > i ? 1 : 0);
           const anglePerSeat = Math.PI / rowSeats;
