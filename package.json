@@ -1,6 +1,6 @@
 {
   "name": "@bostonglobe/d3-parliament",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A parliament chart based on d3",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
