@@ -25,6 +25,7 @@
     "lint": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
+    "watch": "rollup -c -w",
     "prepare": "npm run build"
   },
   "repository": {
