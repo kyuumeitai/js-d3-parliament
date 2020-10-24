@@ -142,9 +142,12 @@ function parliament({
       const seatClasses = (dataPoint) => {
         let c = 'seat ';
         c += (dataPoint.party && dataPoint.party.id) || '';
+        c += (dataPoint.party && dataPoint.party.className) || '';
         return c.trim();
       };
-      const seatFill = (dataPoint) => dataPoint.party.fill;
+      const seatFill = (dataPoint) => dataPoint.party.fill || '';
+      const seatStroke = (dataPoint) => dataPoint.party.stroke || '';
+      const seatStrokeWidth = (dataPoint) => dataPoint.party.strokeWidth;
       const seatX = (dataPoint) => dataPoint.cartesian.x;
       const seatY = (dataPoint) => dataPoint.cartesian.y;
       const seatRadius = (dataPoint) => {
@@ -173,6 +176,8 @@ function parliament({
       const circlesEnter = circles.enter().append('circle');
       circlesEnter.attr('class', seatClasses);
       circlesEnter.attr('fill', seatFill);
+      circlesEnter.attr('stroke', seatStroke);
+      circlesEnter.attr('stroke-width', seatStrokeWidth);
       circlesEnter.attr('cx', enter.fromCenter ? 0 : seatX);
       circlesEnter.attr('cy', enter.fromCenter ? 0 : seatY);
       circlesEnter.attr('r', enter.smallToBig ? 0 : seatRadius);
