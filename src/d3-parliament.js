@@ -12,7 +12,14 @@ const d3 = {
   ...d3Transition,
 };
 
-function parliament() {
+/**
+ * Creates a parliament display.
+ * @param {boolean} animate - Whether to animate the display.
+ * @returns {function}
+ */
+function parliament({
+  animate = false,
+}) {
   /* params */
   let width;
   let height;
@@ -20,15 +27,15 @@ function parliament() {
 
   /* animations */
   const enter = {
-    // smallToBig: true,
-    // fromCenter: true,
+    smallToBig: animate,
+    fromCenter: animate,
   };
   const update = {
-    animate: true,
+    animate,
   };
   const exit = {
-    bigToSmall: true,
-    toCenter: true,
+    bigToSmall: animate,
+    toCenter: animate,
   };
 
   /* events */
