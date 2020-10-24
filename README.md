@@ -1,5 +1,7 @@
 # d3 Parliament chart
 
+NOTE: This readme is out of date as of 10/23/2020, and will be updated.
+
 [![](http://www.geoffreybrossard.fr/github/d3-parliament/example.png)](http://www.geoffreybrossard.fr/github/d3-parliament/)
 
 * [Live example](http://www.geoffreybrossard.fr/github/d3-parliament/)
